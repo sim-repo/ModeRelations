@@ -39,3 +39,11 @@ func getReachableEnemies(playerLocation: Location) -> [EnemyProtocol]? {
 }
 
 
+
+// получить всех союзных
+func getReachableAllias(enemyLocation: Location) -> [MobileAllyProtocol]? {
+    let enemies = liveAlliasRegister.filter{ $1.position == enemyLocation }
+    let en = enemies.map{$1}
+    return en.count == 0 ? nil : en
+}
+

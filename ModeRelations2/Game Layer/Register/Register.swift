@@ -14,4 +14,6 @@ import Foundation
 var liveEnemiesRegister: [EntityID:EnemyProtocol] = [:]
 
 
+var liveAlliasRegister: [EntityID:MobileAllyProtocol] = [:]
+
 

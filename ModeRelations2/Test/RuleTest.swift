@@ -30,7 +30,7 @@ class TestRule {
                                    object: scout,
                                    when: nil)
         
-        i1.addExceptions(object: scout, except: { $0.mode.getKey(mode: .exploreMode(.successful(.hide))) })
+        i1.addExceptions(object: scout, except: { $0.mode.getKey(mode: .defenseMode(.successful(.hide))) })
         i1.setWrapper(){ scout in
             return {
                 scout.health -= 4

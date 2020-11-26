@@ -41,7 +41,7 @@ class ClosureTest {
             return {
                 print("ID: \(turrel.id)")
                 turrel.health -= 4
-                return turrel.selectForceEffect(type: .exploded)
+                return turrel.selectForceEffect(type: .fired)
             }
         }
         

@@ -16,7 +16,7 @@ class ScoutHideService: Servicable {
     let pub = PassthroughSubject<Output, Never>()
     
     var representingMode: ModeKey {
-        return ScoutMode.exploreMode(.successful(.hide)).getKey()
+        return ScoutMode.defenseMode(.successful(.hide)).getKey()
     }
     
     func subscribe() -> AnyPublisher<Output, Never> {

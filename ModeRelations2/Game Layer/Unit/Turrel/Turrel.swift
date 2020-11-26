@@ -12,10 +12,10 @@ typealias TurrelEntity = Turrel<TurrelMode>
 
 
 // MARK:- class
-class Turrel<ModeType: ModeProtocol>: MobileEnemyUnit<ModeType,TurrelForceSendable,TurrelForceReceivable> {
+class Turrel<ModeType: ModeProtocol>: MobileAllyUnit<ModeType,TurrelForceSendable,TurrelForceReceivable> {
     var curWeaponClip: Int = 10
     let maxWeaponClip: Int = 10
-    let damage: Int = 1
+    let damage: Int = 10
 }
 
 
@@ -51,7 +51,7 @@ enum TurrelAttackStates: Int, EnumIndexable {
 
 // MARK:- forces:
 enum TurrelForceReceivable: ForceEffectProtocol {
-    case fired, freezed, exploded
+    case fired, destroyed
 }
 
 

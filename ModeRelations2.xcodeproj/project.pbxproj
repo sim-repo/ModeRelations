@@ -20,7 +20,7 @@
 		164D831E2566702F00561CDD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164D831D2566702F00561CDD /* Service.swift */; };
 		164D83222566717500561CDD /* InveractiveContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164D83212566717500561CDD /* InveractiveContext.swift */; };
 		164D832A2566780800561CDD /* Turrel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164D83292566780800561CDD /* Turrel.swift */; };
-		164D832D2566781200561CDD /* ScanTurrelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164D832C2566781200561CDD /* ScanTurrelService.swift */; };
+		164D832D2566781200561CDD /* TurrelScanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164D832C2566781200561CDD /* TurrelScanService.swift */; };
 		164D83312566781C00561CDD /* TurrelAimService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164D83302566781C00561CDD /* TurrelAimService.swift */; };
 		164D83352566782B00561CDD /* Scout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164D83342566782B00561CDD /* Scout.swift */; };
 		164D83392566785200561CDD /* RuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164D83382566785200561CDD /* RuleTest.swift */; };
@@ -30,6 +30,10 @@
 		16783F4D25687352002C23BE /* TurrelReloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16783F4C25687352002C23BE /* TurrelReloadService.swift */; };
 		169BF7BD256FC51E005B9FE5 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169BF7BC256FC51E005B9FE5 /* Register.swift */; };
 		169BF7C5256FFC90005B9FE5 /* Reachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169BF7C4256FFC90005B9FE5 /* Reachable.swift */; };
+		169BF7D025704DC1005B9FE5 /* ScoutDefenseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169BF7CF25704DC1005B9FE5 /* ScoutDefenseService.swift */; };
+		169BF7D32570515E005B9FE5 /* ScoutReloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169BF7D22570515E005B9FE5 /* ScoutReloadService.swift */; };
+		169BF7D7257055A9005B9FE5 /* ScoutScanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169BF7D6257055A9005B9FE5 /* ScoutScanService.swift */; };
+		169BF7DA25705840005B9FE5 /* ScoutAimService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169BF7D925705840005B9FE5 /* ScoutAimService.swift */; };
 		16A6A800256BBD4400EFCC1F /* ScoutExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6A7FF256BBD4400EFCC1F /* ScoutExploreService.swift */; };
 		16A6A803256BBDDF00EFCC1F /* ScoutHideService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6A802256BBDDF00EFCC1F /* ScoutHideService.swift */; };
 		16A6A806256BBE9B00EFCC1F /* ScoutBack2BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6A805256BBE9B00EFCC1F /* ScoutBack2BaseService.swift */; };
@@ -53,7 +57,7 @@
 		164D831D2566702F00561CDD /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		164D83212566717500561CDD /* InveractiveContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InveractiveContext.swift; sourceTree = "<group>"; };
 		164D83292566780800561CDD /* Turrel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Turrel.swift; sourceTree = "<group>"; };
-		164D832C2566781200561CDD /* ScanTurrelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanTurrelService.swift; sourceTree = "<group>"; };
+		164D832C2566781200561CDD /* TurrelScanService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurrelScanService.swift; sourceTree = "<group>"; };
 		164D83302566781C00561CDD /* TurrelAimService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurrelAimService.swift; sourceTree = "<group>"; };
 		164D83342566782B00561CDD /* Scout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scout.swift; sourceTree = "<group>"; };
 		164D83382566785200561CDD /* RuleTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleTest.swift; sourceTree = "<group>"; };
@@ -63,6 +67,10 @@
 		16783F4C25687352002C23BE /* TurrelReloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurrelReloadService.swift; sourceTree = "<group>"; };
 		169BF7BC256FC51E005B9FE5 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		169BF7C4256FFC90005B9FE5 /* Reachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachable.swift; sourceTree = "<group>"; };
+		169BF7CF25704DC1005B9FE5 /* ScoutDefenseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutDefenseService.swift; sourceTree = "<group>"; };
+		169BF7D22570515E005B9FE5 /* ScoutReloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutReloadService.swift; sourceTree = "<group>"; };
+		169BF7D6257055A9005B9FE5 /* ScoutScanService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutScanService.swift; sourceTree = "<group>"; };
+		169BF7D925705840005B9FE5 /* ScoutAimService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutAimService.swift; sourceTree = "<group>"; };
 		16A6A7FF256BBD4400EFCC1F /* ScoutExploreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutExploreService.swift; sourceTree = "<group>"; };
 		16A6A802256BBDDF00EFCC1F /* ScoutHideService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutHideService.swift; sourceTree = "<group>"; };
 		16A6A805256BBE9B00EFCC1F /* ScoutBack2BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutBack2BaseService.swift; sourceTree = "<group>"; };
@@ -86,6 +94,10 @@
 			children = (
 				16A6A7FF256BBD4400EFCC1F /* ScoutExploreService.swift */,
 				16A6A805256BBE9B00EFCC1F /* ScoutBack2BaseService.swift */,
+				169BF7D6257055A9005B9FE5 /* ScoutScanService.swift */,
+				169BF7D925705840005B9FE5 /* ScoutAimService.swift */,
+				169BF7CF25704DC1005B9FE5 /* ScoutDefenseService.swift */,
+				169BF7D22570515E005B9FE5 /* ScoutReloadService.swift */,
 				16A6A802256BBDDF00EFCC1F /* ScoutHideService.swift */,
 			);
 			path = "Behavior Service";
@@ -166,7 +178,8 @@
 		164D83282566780000561CDD /* Turrel */ = {
 			isa = PBXGroup;
 			children = (
-				16783F4B25687319002C23BE /* Service */,
+				169BF7DE25705EE7005B9FE5 /* Effect Service */,
+				16783F4B25687319002C23BE /* Behavior Service */,
 				164D83292566780800561CDD /* Turrel.swift */,
 			);
 			path = Turrel;
@@ -193,15 +206,15 @@
 			path = "Game Layer";
 			sourceTree = "<group>";
 		};
-		16783F4B25687319002C23BE /* Service */ = {
+		16783F4B25687319002C23BE /* Behavior Service */ = {
 			isa = PBXGroup;
 			children = (
-				164D832C2566781200561CDD /* ScanTurrelService.swift */,
+				164D832C2566781200561CDD /* TurrelScanService.swift */,
 				164D83302566781C00561CDD /* TurrelAimService.swift */,
 				16783F4825687314002C23BE /* TurrelAttackService.swift */,
 				16783F4C25687352002C23BE /* TurrelReloadService.swift */,
 			);
-			path = Service;
+			path = "Behavior Service";
 			sourceTree = "<group>";
 		};
 		169BF7B6256FBEDB005B9FE5 /* Extension */ = {
@@ -226,6 +239,13 @@
 				169BF7C4256FFC90005B9FE5 /* Reachable.swift */,
 			);
 			path = Hit;
+			sourceTree = "<group>";
+		};
+		169BF7DE25705EE7005B9FE5 /* Effect Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Effect Service";
 			sourceTree = "<group>";
 		};
 		16A6A80F256BE13700EFCC1F /* Effect Service */ = {
@@ -308,13 +328,15 @@
 			files = (
 				164D83222566717500561CDD /* InveractiveContext.swift in Sources */,
 				16783F462567C85E002C23BE /* Intermode.swift in Sources */,
+				169BF7DA25705840005B9FE5 /* ScoutAimService.swift in Sources */,
 				16A6A812256BED8300EFCC1F /* FireDamageEffect.swift in Sources */,
 				164D831425666F2D00561CDD /* Entity.swift in Sources */,
 				169BF7BD256FC51E005B9FE5 /* Register.swift in Sources */,
 				164D831025666EDF00561CDD /* Task.swift in Sources */,
-				164D832D2566781200561CDD /* ScanTurrelService.swift in Sources */,
+				164D832D2566781200561CDD /* TurrelScanService.swift in Sources */,
 				164D83352566782B00561CDD /* Scout.swift in Sources */,
 				161A5E20256ACFFF0084907F /* LiveUnit.swift in Sources */,
+				169BF7D32570515E005B9FE5 /* ScoutReloadService.swift in Sources */,
 				16783F4925687314002C23BE /* TurrelAttackService.swift in Sources */,
 				164D831725666FD000561CDD /* Mode.swift in Sources */,
 				16783F4D25687352002C23BE /* TurrelReloadService.swift in Sources */,
@@ -324,7 +346,9 @@
 				16A6A803256BBDDF00EFCC1F /* ScoutHideService.swift in Sources */,
 				16A6A806256BBE9B00EFCC1F /* ScoutBack2BaseService.swift in Sources */,
 				16A6A816256BEDCB00EFCC1F /* FreezeDamageEffect.swift in Sources */,
+				169BF7D7257055A9005B9FE5 /* ScoutScanService.swift in Sources */,
 				164D834A2567071900561CDD /* ClosureTest.swift in Sources */,
+				169BF7D025704DC1005B9FE5 /* ScoutDefenseService.swift in Sources */,
 				16A6A800256BBD4400EFCC1F /* ScoutExploreService.swift in Sources */,
 				164D82FE25666E9700561CDD /* ModeRelations2App.swift in Sources */,
 				164D83392566785200561CDD /* RuleTest.swift in Sources */,

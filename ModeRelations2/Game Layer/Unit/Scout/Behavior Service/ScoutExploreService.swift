@@ -48,7 +48,7 @@ class ScoutExploreService: Servicable {
             
             while count > 0 {
                 count -= 1
-                usleep(100000)
+                usleep(10000)
                 print("\nscout ID: \(subject.id) explore: ACTION: \(count)")
                 
                 if subject.wi!.isCancelled {

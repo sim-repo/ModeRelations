@@ -49,12 +49,12 @@ extension ModeProtocol {
 //MARK:- Status
 enum StatusType<State: EnumIndexable>: EnumIndexable {
     
-    case successful(State), pending(State), running(State), failed(State)
+    case successful(State), running(State), failed(State), pending(State)
     
     static var allCases: [StatusType] {
                 State.allCases.map(StatusType.successful)
-            +   State.allCases.map(StatusType.pending)
             +   State.allCases.map(StatusType.running)
             +   State.allCases.map(StatusType.failed)
+            +   State.allCases.map(StatusType.pending)
     }
 }

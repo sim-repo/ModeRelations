@@ -12,32 +12,37 @@ typealias ScoutEntity = Scout<ScoutMode>
 
 // MARK:- class
 class Scout<ModeType: ModeProtocol>: MobileEnemyUnit<ModeType, ScoutForceSendable, ScoutForceReceivable> {
+    var curWeaponClip: Int = 10
+    let maxWeaponClip: Int = 10
+    let damage: Int = 1
 }
 
 
 // MARK:- mode
 enum ScoutMode: ModeProtocol {
     case destroyed
+    case defenseMode(StatusType<ScoutDefenseStates>)
     case exploreMode(StatusType<ScoutExploreStates>)
-    case defendMode(StatusType<ScoutDefendStates>)
+   
     
     static var allCases: [ScoutMode] {
                   [ScoutMode.destroyed]
+             +    StatusType.allCases.map(ScoutMode.defenseMode)
              +    StatusType.allCases.map(ScoutMode.exploreMode)
-             +    StatusType.allCases.map(ScoutMode.defendMode)
     }
 }
 
 
 // MARK:- states:
 
-enum ScoutExploreStates: Int, EnumIndexable {
-    case hide, explore, back2Base
+enum ScoutDefenseStates: Int, EnumIndexable {
+    case hide, reload, attack, aim, scan
 }
 
-enum ScoutDefendStates: Int, EnumIndexable {
-    case move2Base, defend
+enum ScoutExploreStates: Int, EnumIndexable {
+    case explore, back2Base
 }
+
 
 
 // MARK:- forces:
