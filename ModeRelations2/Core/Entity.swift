@@ -21,25 +21,25 @@ enum EntityType: Int {
 
 
 // рутовый протокол для всех сущностей
-protocol Unit: class {
+protocol UnitProtocol: class {
     var id: EntityID { get set }
     var kindID: KindID { get set }
 }
 
 
 // протокол для сущностей, которые могут работать в разных режимах
-protocol StatefulUnit: Unit {
+protocol StatefulUnitProtocol: UnitProtocol {
     func getModeKey() -> ModeKey
     func entryPointSend(closureEffect: @escaping InteractiveClosureType)
 }
 
 // протокол для сущностей, которые (с которыми) могут взаимодействовать другие сущности
-protocol Interactable: StatefulUnit {
+protocol Interactable: StatefulUnitProtocol {
     associatedtype ModeType
-    
-    var mode: ModeType { get set }
-    var statePublisher: PassthroughSubject<ModeKey,Never>{ get set }
 
+    var mode: ModeType { get set }
+    
+    var statePublisher: PassthroughSubject<ModeKey,Never>{ get set }
     func onChangeState() -> AnyPublisher<ModeKey,Never>
 }
 
@@ -57,7 +57,7 @@ extension Interactable {
 
 
 // нужен, чтобы убрать boiler-plate из каждой сущности
-class Entity<ModeType: ModeProtocol, SubjectUsedForce: SubjectUsedForceProtocol, ObjectResultingEffect: ObjectResultingEffectProtocol>: Interactable {
+class Entity<ModeType: ModeProtocol, SubjectUsedForce: UsedForceProtocol, ObjectResultingEffect: ForceEffectProtocol>: Interactable {
 
     typealias InteractiveClosure = InteractiveClosureType
     

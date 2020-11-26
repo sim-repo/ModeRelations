@@ -40,19 +40,25 @@ class ScoutHideService: Servicable {
     
     
     func run(subject: Input) {
-        print("\nhide:        ACTION  subjectID: \(subject.id)")
+        
         subject.wi?.cancel()
         subject.wi?.wait()
-        subject.mode = .exploreMode(.successful(.hide))
+        
+        guard subject.mode.getKey() == representingMode else { return } // проверить что субъект находится в согласованном состоянии
+        
+        print("\nhide ID: \(subject.id) explore: ACTION")
         subject.wi = DispatchWorkItem {
             var count = 100000
             while count > 0 {
                 count -= 1
                 usleep(500000)
-                print("hide id: \(subject.id) - \(subject.mode)")
+                print("\nhide ID: \(subject.id) explore: ACTION: \(count)")
+                
+                if subject.health <= 0 {
+                    break
+                }
             }
         }
-        
         DispatchQueue.global().async(execute: subject.wi!)
     }
 }

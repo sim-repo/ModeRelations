@@ -41,15 +41,15 @@ class ScoutExploreService: Servicable {
     
     
     func run(subject: Input) {
-        print("\nexplore:        ACTION \(subject.id)")
+        print("\nscout ID: \(subject.id) explore: ACTION")
         
         subject.wi = DispatchWorkItem {
             var count = 100000
             
             while count > 0 {
                 count -= 1
-                usleep(9000000)
-                print("explore id: \(subject.id) - \(count)")
+                usleep(100000)
+                print("\nscout ID: \(subject.id) explore: ACTION: \(count)")
                 
                 if subject.wi!.isCancelled {
                     break
@@ -63,5 +63,4 @@ class ScoutExploreService: Servicable {
         
         DispatchQueue.global().async(execute: subject.wi!)
     }
-    
 }

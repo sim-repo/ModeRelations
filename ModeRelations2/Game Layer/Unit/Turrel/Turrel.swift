@@ -12,31 +12,36 @@ typealias TurrelEntity = Turrel<TurrelMode>
 
 
 // MARK:- class
-class Turrel<ModeType: ModeProtocol>: GameEntity<ModeType,TurrelForceSendable,TurrelForceReceivable> {
+class Turrel<ModeType: ModeProtocol>: MobileEnemyUnit<ModeType,TurrelForceSendable,TurrelForceReceivable> {
     var curWeaponClip: Int = 10
     let maxWeaponClip: Int = 10
     let damage: Int = 1
-    var health: Int = 100
 }
 
 
 // MARK:- mode
 enum TurrelMode: ModeProtocol {
+    case destroyed
     case scanMode(StatusType<TurrelScanStates>)
     case attackMode(StatusType<TurrelAttackStates>)
     
     static var allCases: [TurrelMode] {
-                StatusType.allCases.map(TurrelMode.scanMode)
+                [TurrelMode.destroyed]
+            +   StatusType.allCases.map(TurrelMode.scanMode)
             +   StatusType.allCases.map(TurrelMode.attackMode)
     }
 }
 
 
 // MARK:- states:
+
+enum TurrelDestroyedStates: Int, EnumIndexable {
+    case destroyed
+}
+
 enum TurrelScanStates: Int, EnumIndexable {
     case scan, identification
 }
-
 
 enum TurrelAttackStates: Int, EnumIndexable {
     case aim, attack, reload
@@ -45,15 +50,12 @@ enum TurrelAttackStates: Int, EnumIndexable {
 
 
 // MARK:- forces:
-enum TurrelForceReceivable: ObjectResultingEffectProtocol {
+enum TurrelForceReceivable: ForceEffectProtocol {
     case fired, freezed, exploded
-//    func get(by key: ResultingEffectKey) -> TurrelForceReceivable {
-//        return Self.allCases[key]
-//    }
 }
 
 
-enum TurrelForceSendable: SubjectUsedForceProtocol {
+enum TurrelForceSendable: UsedForceProtocol {
     case fire, freeze, electro
 }
 

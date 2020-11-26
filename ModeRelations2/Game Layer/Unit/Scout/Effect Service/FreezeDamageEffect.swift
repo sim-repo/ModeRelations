@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 
 class ScoutFreezeDamageEffect <T:TaskProtocol> where T.Input == ScoutEntity {

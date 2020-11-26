@@ -61,7 +61,7 @@ class TurrelAttackService: Servicable {
 extension TurrelAttackService {
     
     func runAfterAim(_ subject: Input) {
-        print("\nATTACK:        ACTION  _0")
+        print("\nturrel ID: \(subject.id) attack: ACTION_0 🏹")
 
         ISB_to_CSC(subject: subject, serviceID: serviceID) {contexts in
             subject.mode = .attackMode(.running(.attack))
@@ -76,7 +76,7 @@ extension TurrelAttackService {
     
     
     func runAfterReload(_ subject: Input) {
-        print("\nATTACK:        ACTION  _1")
+        print("\nturrel ID: \(subject.id) attack: ACTION_1 🏹")
         subject.mode = .attackMode(.running(.attack))
     
         CSC_to_CSC(serviceID: serviceID) {contexts in
@@ -98,22 +98,22 @@ extension TurrelAttackService {
         var allDestroyed = false
         
         while(!needWeaponClipReload && !allDestroyed) {
-            if let attacked = contexts.popLast() {
-            
-                while(!needWeaponClipReload) {
+            if let context = contexts.last {
+                let enemy = context.object as! EnemyProtocol
+                while(!needWeaponClipReload && enemy.health > 0) {
                     subject.curWeaponClip -= 1
-                    
-                    let closureEffect = attacked.interactiveClosure
-                    attacked.object.entryPointSend(closureEffect: closureEffect) // отправить контекст
-                    
-                    // TODO получить обратную связь
-        
+                    let closureEffect = context.interactiveClosure
+                    enemy.entryPointSend(closureEffect: closureEffect) // отправить контекст
                     needWeaponClipReload = subject.curWeaponClip == 0
+                    if enemy.health <= 0 {
+                        print("\nturrel ID: \(subject.id) destroyed object ID: \(enemy.id) ✌️")
+                        contexts.popLast()
+                    }
                 }
             }
-           // allDestroyed = contexts.count == 0
+            allDestroyed = contexts.count == 0
         }
-        
+    
         if allDestroyed || needWeaponClipReload {
             subject.mode = .attackMode(.successful(.attack))
         }

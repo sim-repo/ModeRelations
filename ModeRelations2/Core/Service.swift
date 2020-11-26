@@ -36,10 +36,10 @@ protocol Servicable: ModePriorityPresentable {
 // interactiveClosure - эффект, который получает объект от воздействия силы
 class Context: Hashable, Equatable {
     let usedForceKey: ForceKey
-    let object: StatefulUnit
+    let object: StatefulUnitProtocol
     let interactiveClosure: InteractiveClosureType
     
-    init(usedForceKey: ForceKey, object: StatefulUnit, interactiveClosure: @escaping InteractiveClosureType) {
+    init(usedForceKey: ForceKey, object: StatefulUnitProtocol, interactiveClosure: @escaping InteractiveClosureType) {
         self.usedForceKey = usedForceKey
         self.object = object
         self.interactiveClosure = interactiveClosure
@@ -69,13 +69,13 @@ class Context: Hashable, Equatable {
 // сервис сохраняет объекты, с кот. он работал, чтобы спустя время продолжить с ними работу
 // пример: цикличное выполнение тасков
 
-private var serviceCache: [ServiceID:[StatefulUnit]] = [:]
+private var serviceCache: [ServiceID:[StatefulUnitProtocol]] = [:]
 
-func pushServiceCache(with key: ServiceID, objects: [StatefulUnit]) {
+func pushServiceCache(with key: ServiceID, objects: [StatefulUnitProtocol]) {
     serviceCache[key] = objects
 }
 
-func popServiceCache(by key: ServiceID) -> StatefulUnit? {
+func popServiceCache(by key: ServiceID) -> StatefulUnitProtocol? {
     return serviceCache[key]?.popLast()
 }
 
@@ -106,14 +106,14 @@ func getCSC(by key: ServiceID) -> [Context]? {
 //MARK: Interservice Object Buffer
 // буфер для обмена объектами между сервисами
 
-private var interserviceObjectBuffer: [ModeKey:[StatefulUnit]] = [:]
+private var interserviceObjectBuffer: [ModeKey:[StatefulUnitProtocol]] = [:]
 
-func pushInterserviceObjectBuffer(with key: ModeKey, objects: [StatefulUnit]) {
+func pushInterserviceObjectBuffer(with key: ModeKey, objects: [StatefulUnitProtocol]) {
     interserviceObjectBuffer[key] = objects
 }
 
 
-func popInterserviceObjectBuffer(by key: ModeKey) -> [StatefulUnit]? {
+func popInterserviceObjectBuffer(by key: ModeKey) -> [StatefulUnitProtocol]? {
     if let context = interserviceObjectBuffer[key] {
         interserviceObjectBuffer[key] = nil
         return context

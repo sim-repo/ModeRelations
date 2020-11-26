@@ -44,7 +44,7 @@ class TurrelReloadService: Servicable {
 
 
     func publishWithAction(subject: Input) {
-        print("\nRELOAD:        ACTION")
+        print("\nturrel ID: \(subject.id) reload: ACTION 🔋")
         subject.mode = .attackMode(.running(.reload))
         
         //changes state

@@ -20,10 +20,11 @@ typealias InteractiveClosureWrapper<Object> = (Object)-> InteractiveClosureType
 typealias InteractiveContextTuple = (ModeKey?, ForceKey, InteractiveClosureType)
 typealias AllInteractiveContextTuple = (ModeKey?, [Context])
 
+// применяемая сила субъекта в отношении объекта
+protocol UsedForceProtocol: CaseIterable, Equatable {}
 
-protocol SubjectUsedForceProtocol: CaseIterable, Equatable {}
-
-protocol ObjectResultingEffectProtocol: CaseIterable, Equatable {}
+// эффект от применяемой силы субъектом
+protocol ForceEffectProtocol: CaseIterable, Equatable {}
 
 
 var interactiveContexts: [ContextID:InteractiveContextProtocol] = [:]
@@ -44,7 +45,7 @@ protocol InteractiveContextProtocol {
     func getObjectExceptionalModes() -> [ModeKey]?
     
     func getSubjectUsedForce() -> ForceKey
-    func getClosure(object: StatefulUnit) -> InteractiveClosureType?
+    func getClosure(object: StatefulUnitProtocol) -> InteractiveClosureType?
 }
 
 
@@ -123,7 +124,7 @@ struct InteractiveContext<Subject: Interactable, Object: Interactable>: Interact
         self.wrapper = wrapper
     }
     
-    func getClosure(object: StatefulUnit) -> InteractiveClosureType? {
+    func getClosure(object: StatefulUnitProtocol) -> InteractiveClosureType? {
         guard let obj = object as? Object else { return nil }
         return wrapper?(obj)
     }
@@ -157,7 +158,7 @@ func createModeKey(modeKey: ModeKey) -> ContextID {
 
 //MARK:- Get Interactivity Context
 
-func tryGetAllInteractivityContext(subject: StatefulUnit,objects: [StatefulUnit]) -> AllInteractiveContextTuple? {
+func tryGetAllInteractivityContext(subject: StatefulUnitProtocol,objects: [StatefulUnitProtocol]) -> AllInteractiveContextTuple? {
 
     var priorityModeKey: ModeKey = 10000
     var contexts: [Context] = []
@@ -187,7 +188,7 @@ func tryGetAllInteractivityContext(subject: StatefulUnit,objects: [StatefulUnit]
 
 
 
-func tryGetInteractivityContext(_ contextResult: ContextResult, object: StatefulUnit) -> InteractiveContextTuple? {
+func tryGetInteractivityContext(_ contextResult: ContextResult, object: StatefulUnitProtocol) -> InteractiveContextTuple? {
     switch contextResult {
         case .nextMode(let context):
             guard let closure = context.getClosure(object: object) else { return nil }
@@ -224,7 +225,7 @@ func getContext(by subjectKindID: KindID, with subjectModeKey: ModeKey, by objec
 
 //MARK:- Get Exception Mode
 
-func tryGetIfExceptionMode(subject: StatefulUnit, objects: [StatefulUnit]) -> ModeKey? {
+func tryGetIfExceptionMode(subject: StatefulUnitProtocol, objects: [StatefulUnitProtocol]) -> ModeKey? {
   
     var priorityModeKey: ModeKey = 10000
     

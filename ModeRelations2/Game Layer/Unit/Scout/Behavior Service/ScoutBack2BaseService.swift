@@ -39,5 +39,6 @@ class ScoutBack2BaseService: Servicable {
     }
     
     func run(subject: Input) {
+        print("\nscout ID: \(subject.id) back2base: ACTION")
     }
 }

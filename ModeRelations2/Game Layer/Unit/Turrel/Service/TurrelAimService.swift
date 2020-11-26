@@ -59,7 +59,7 @@ class TurrelAimService: Servicable {
 extension TurrelAimService {
     
     func runAfterIdentification(_ subject: Input) {
-        print("\nAIM:        ACTION  _0")
+        print("\nturrel ID: \(subject.id) aim: ACTION_0 🎯")
         ISB_to_ISB_seq(subject: subject, serviceID: serviceID) {contexts in
             subject.mode = .attackMode(.running(.aim))
             
@@ -88,7 +88,7 @@ extension TurrelAimService {
     }
     
     func runAfterAttack(_ subject: Input) {
-        print("\nAIM:        ACTION _1")
+        print("\nturrel ID: \(subject.id) aim: ACTION_1 🎯")
         subject.mode = .attackMode(.pending(.aim))
         extractedFunc(subject)
         

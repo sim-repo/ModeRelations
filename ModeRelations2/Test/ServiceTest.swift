@@ -15,7 +15,7 @@ class ServiceTest {
     let scout = ScoutEntity(id: 1, kindID: .scout, mode: .exploreMode(.successful(.explore )))
     
     init() {
-        unitRegister.append(scout)
+        liveEnemiesRegister[scout.id] = scout
         config()
         test()
     }

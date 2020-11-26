@@ -9,13 +9,13 @@ import Foundation
 
 
 protocol InteractiveClosureProtocol {
-    func getClosure(object: StatefulUnit) -> InteractiveClosureType?
+    func getClosure(object: StatefulUnitProtocol) -> InteractiveClosureType?
 }
 
 class ClosureTest {
 
 
-    struct InteractiveClosure<Object: StatefulUnit>: InteractiveClosureProtocol {
+    struct InteractiveClosure<Object: StatefulUnitProtocol>: InteractiveClosureProtocol {
         var contextID: ContextID?
         var wrapper: InteractiveClosureWrapper<Object>?
 
@@ -23,7 +23,7 @@ class ClosureTest {
             self.wrapper = wrapper
         }
 
-        func getClosure(object: StatefulUnit) -> InteractiveClosureType? {
+        func getClosure(object: StatefulUnitProtocol) -> InteractiveClosureType? {
             guard let obj = object as? Object else { return nil }
             return wrapper?(obj)
         }

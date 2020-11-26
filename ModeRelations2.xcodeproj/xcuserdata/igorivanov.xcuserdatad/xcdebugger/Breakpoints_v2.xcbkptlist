@@ -110,8 +110,8 @@
             filePath = "ModeRelations2/Core/InveractiveContext.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "tryGetAllInteractivityContext(subject:objects:)"
             landmarkType = "9">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "ModeRelations2/Core/InveractiveContext.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "init(subject:with:into:ifException:usedForce:object:when:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -430,8 +430,8 @@
             filePath = "ModeRelations2/Test/InteractTest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "configScout(scout:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -510,40 +510,40 @@
             filePath = "ModeRelations2/Game Layer/Unit/Scout/Behavior Service/ScoutHideService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "run(subject:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B378E1E0-93BA-48BD-9F22-203E614E421E - d315d3c3fb4d0468"
+                  uuid = "B378E1E0-93BA-48BD-9F22-203E614E421E - 1a6aaf671f9aaa1f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "ModeRelations2.ScoutHideService.run(subject: ModeRelations2.Scout&lt;ModeRelations2.ScoutMode&gt;) -&gt; ()"
                   moduleName = "ModeRelations2"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igorivanov/Desktop/ModeRelations2/ModeRelations2/Game%20Layer/Unit/Scout/Behavior%20Service/ScoutHideService.swift"
+                  urlString = "file:///Users/igorivanov/Desktop/ModeRelations/ModeRelations2/Game%20Layer/Unit/Scout/Behavior%20Service/ScoutHideService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "905">
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "1191">
                </Location>
                <Location
-                  uuid = "B378E1E0-93BA-48BD-9F22-203E614E421E - fba6817c05d3f225"
+                  uuid = "B378E1E0-93BA-48BD-9F22-203E614E421E - 32d9fdd8e1045c90"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 () -&gt; () in ModeRelations2.ScoutHideService.run(subject: ModeRelations2.Scout&lt;ModeRelations2.ScoutMode&gt;) -&gt; ()"
                   moduleName = "ModeRelations2"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igorivanov/Desktop/ModeRelations2/ModeRelations2/Game%20Layer/Unit/Scout/Behavior%20Service/ScoutHideService.swift"
+                  urlString = "file:///Users/igorivanov/Desktop/ModeRelations/ModeRelations2/Game%20Layer/Unit/Scout/Behavior%20Service/ScoutHideService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "69">
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "95">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -558,9 +558,201 @@
             filePath = "ModeRelations2/Game Layer/Unit/Scout/Effect Service/FireDamageEffect.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "tryRunTask(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B0D3257-07B0-4998-B0B5-1E7F15CEDACE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModeRelations2/Game Layer/Extension/LiveUnit.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "714602CC-D9DF-40EE-879A-6F15B0C43F94"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModeRelations2/Game Layer/Unit/Scout/Behavior Service/ScoutHideService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "run(subject:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CBAED2FC-D02B-49F2-8F5D-F958397F548F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModeRelations2/Test/InteractTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "configScout(scout:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6B8D0BB5-7F99-41FE-B0AE-68D0F225ABC3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModeRelations2/Test/InteractTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "configScout(scout:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4DE4D539-66C9-4FC3-A69B-2E7B98B4A3BA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModeRelations2/Test/InteractTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "configScout(scout:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "084BE1A1-2751-478A-905B-15DA3BE2F550"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModeRelations2/Test/InteractTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "configScout(scout:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "696A2799-8686-421E-9592-B639C07E3053"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModeRelations2/Game Layer/Unit/Scout/Behavior Service/ScoutHideService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "run(subject:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AFE34196-4CE3-489F-8953-CFE0E74125EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModeRelations2/Game Layer/Unit/Scout/Behavior Service/ScoutHideService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "run(subject:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "91E723B6-0C6D-4D80-9BE9-CC15814F4F11"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModeRelations2/Game Layer/Unit/Scout/Behavior Service/ScoutHideService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "run(subject:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1AA914E6-588B-47DB-AC78-99858D35774E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModeRelations2/Game Layer/Unit/Scout/Behavior Service/ScoutHideService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "run(subject:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18027D2B-6948-41AD-AE79-E7E22568B75C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModeRelations2/Test/InteractTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "configScout(scout:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B161DA39-2501-43FA-89E2-DF7994AA3876"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModeRelations2/Test/InteractTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "configScout(scout:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

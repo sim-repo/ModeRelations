@@ -13,8 +13,7 @@ class InteractService {
     let turret = TurrelEntity(id: 0, kindID: .turrel, mode: .scanMode(.running(.identification) ))
     let scout = ScoutEntity(id: 1, kindID: .scout, mode: .exploreMode(.successful(.explore )))
     let scout2 = ScoutEntity(id: 2, kindID: .scout, mode: .exploreMode(.successful(.explore )))
-    let scout3 = ScoutEntity(id: 3, kindID: .scout, mode: .exploreMode(.successful(.explore )))
-    let scout4 = ScoutEntity(id: 4, kindID: .scout, mode: .exploreMode(.successful(.explore )))
+
     
     //scout:
     let explore = Task(service: ScoutExploreService())
@@ -31,16 +30,12 @@ class InteractService {
     
     
     init(){
-        unitRegister.append(scout)
-        unitRegister.append(scout2)
-        unitRegister.append(scout3)
-        unitRegister.append(scout4)
+        liveEnemiesRegister[scout.id] = scout
+        liveEnemiesRegister[scout2.id] = scout2
         configContext()
         configTurrel()
         configScout(scout: scout)
         configScout(scout: scout2)
-        configScout(scout: scout3)
-        configScout(scout: scout4)
         run()
     }
     
@@ -84,23 +79,33 @@ class InteractService {
     func configScout(scout: ScoutEntity){
 
         scout.configEntryPoint {resultEffectKey in
-            let resultEffect = self.scout.getForceEffect(by: resultEffectKey)
+            var resultEffect = scout.getForceEffect(by: resultEffectKey)
             
             // nessesary check
             if scout.health <= 0 {
-                
+                liveEnemiesRegister[scout.id] = nil
+                scout.mode = .destroyed
+                scout.wi?.cancel()
+                resultEffect = .destroyed
             }
+            
             
             switch resultEffect {
                case .fired:
+                // TODO: можно путем применение сценария эспертных оценок выбрать режим, например если атакующий имеет меньше здоровья или он слишком медленный
+                // Можно вместо hide добавить блок принятия решения (Task), который анализирует возможности (сколько союзниых юнитов рядом, какова сила противника и тп)
+                // например: Decision(Scan Enemies, Scan Allies, Scan Health)
                     ScoutFireDamageEffect(task: self.hide).run(entity: scout)
                case .freezed:
-                    print("freezed")
+                    print("scout ID: \(scout.id) 🥶 " )
                     ScoutFreezeDamageEffect(task: self.hide).run(entity: scout)
                case .exploded:
-                    print("exploded")
+                    print("scout ID: \(scout.id) 💥 " )
+               case .destroyed:
+                    print("scout ID: \(scout.id)  🔥🔥🔥🔥🔥🔥🔥")
             }
         }
+        
         
         explore
             .asyncAfterIf(on: back2base, condition: { $0.mode == .exploreMode(.successful(.explore)) }, then: .doAction, else_: .doContinue)
@@ -112,8 +117,6 @@ class InteractService {
     func run(){
         explore.input = scout
         explore.input = scout2
-        explore.input = scout3
-        explore.input = scout4
         scan.input = turret
     }
 }

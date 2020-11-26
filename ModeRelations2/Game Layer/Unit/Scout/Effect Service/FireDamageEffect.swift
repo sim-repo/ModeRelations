@@ -9,26 +9,19 @@ import Foundation
 
 
 import Foundation
-import Combine
-
 
 class ScoutFireDamageEffect <T:TaskProtocol> where T.Input == ScoutEntity {
-
     var task: T
-    
     
     init(task: T) {
         self.task = task
     }
     
-    
     func run(entity: ScoutEntity){
-        
         //TODO:
-        // run effect
+        print("scout ID: \(entity.id)  🔥")
         tryRunTask(entity)
     }
-    
     
     private func tryRunTask(_ entity: ScoutEntity) {
         let serviceModeKey = self.task.service.representingMode

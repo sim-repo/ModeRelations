@@ -44,14 +44,14 @@ class TurrelScanService: Servicable {
 
     
     func run(subject: Input) {
-        print("\nSCAN:        ACTION")
+        print("\nturrel ID: \(subject.id) scan: ACTION 🕵️‍♂️")
         subject.mode = .scanMode(.running(.scan))
         
         var hasDetection = false
         
         while !hasDetection {
             
-            if let objects = getAvailableByDistanceUnits(location: subject.position) {
+            if let objects = getReachableEnemies(playerLocation: subject.position) {
                 subject.mode = .scanMode(.successful(.scan))
                 subject.mode = .scanMode(.pending(.identification))
                 subject.mode = .scanMode(.running(.identification))
